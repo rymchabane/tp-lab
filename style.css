@@ -1,0 +1,111 @@
+/* Style général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Titre principal */
+h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease;
+}
+
+/* Paragraphes */
+p {
+    color: #e0e0e0;
+    font-size: 1.2em;
+    margin: 10px 0;
+    line-height: 1.6;
+    max-width: 600px;
+    animation: fadeInUp 1s ease;
+}
+
+/* Dernier paragraphe (information étudiant) */
+p:last-of-type {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 30px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    p {
+        font-size: 1.1em;
+        padding: 0 15px;
+    }
+    
+    p:last-of-type {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+}
+.basket-image {
+    width: 300px;           /* Largeur de l'image */
+    height: auto;           /* Hauteur automatique pour garder les proportions */
+    border-radius: 15px;    /* Coins arrondis */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Ombre */
+    margin: 20px auto;      /* Marge autour de l'image */
+    display: block;         /* Pour que margin: auto fonctionne */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.basket-image:hover {
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
